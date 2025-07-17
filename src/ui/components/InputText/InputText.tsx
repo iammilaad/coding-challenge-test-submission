@@ -1,29 +1,25 @@
-import React, { FunctionComponent } from "react";
-
+import React, { FunctionComponent, InputHTMLAttributes } from "react";
 import $ from "./InputText.module.css";
 
-interface InputTextProps {
+interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   placeholder: string;
-  value: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const InputText: FunctionComponent<InputTextProps> = ({
   name,
-  onChange,
   placeholder,
-  value,
+  className,
+  ...rest
 }) => {
   return (
     <input
       aria-label={name}
-      className={$.inputText}
+      className={`${$.inputText} ${className || ""}`}
       name={name}
-      onChange={onChange}
       placeholder={placeholder}
       type="text"
-      value={value}
+      {...rest}
     />
   );
 };
