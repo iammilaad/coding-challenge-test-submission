@@ -1,4 +1,4 @@
-import { ButtonType, ButtonVariant } from "@/types";
+import type { ButtonType, ButtonVariant } from "@/types";
 import React, { FunctionComponent } from "react";
 
 import $ from "./Button.module.css";
