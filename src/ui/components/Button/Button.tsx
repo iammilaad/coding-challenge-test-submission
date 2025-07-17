@@ -33,11 +33,7 @@ const Button: FunctionComponent<ButtonProps> = ({
       onClick={onClick}
       disabled={loading}
     >
-      {loading && (
-        <span data-testid="loading-spinner" className={$.spinner}>
-          ⏳
-        </span>
-      )}
+      {loading && <span data-testid="loading-spinner" className={$.spinner} />}
       {children}
     </button>
   );

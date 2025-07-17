@@ -129,7 +129,7 @@ function App() {
           loading={loading}
           label="🏠 Find an address"
           onFormSubmit={handleAddressSubmit}
-          submitText={loading ? "Finding..." : "Find"}
+          submitText="Find"
           formEntries={[
             {
               name: "postCode",
